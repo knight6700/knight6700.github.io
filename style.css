@@ -964,6 +964,19 @@ ul {
   color: #ffffff;
 }
 
+.education__icon--img {
+  background: none;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.education__icon--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .education__icon svg {
   width: 28px;
   height: 28px;
