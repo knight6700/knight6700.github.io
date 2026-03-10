@@ -119,24 +119,38 @@ counters.forEach(c => counterObserver.observe(c));
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinks.forEach(link => {
-        link.style.color = '';
-        if (link.getAttribute('href') === `#${id}`) {
-          link.style.color = 'var(--color-accent)';
-        }
-      });
+function updateActiveNav() {
+  const scrollY = window.scrollY;
+  let currentSection = '';
+  const sectionToNav = {
+    'about': 'about',
+    'skills': 'skills',
+    'experience': 'experience',
+    'apps': 'apps',
+    'opensource': 'opensource',
+    'education': 'contact',
+    'contact': 'contact'
+  };
+  const sectionOrder = ['about', 'skills', 'experience', 'apps', 'opensource', 'education', 'contact'];
+
+  for (let i = sectionOrder.length - 1; i >= 0; i--) {
+    const section = document.getElementById(sectionOrder[i]);
+    if (section && scrollY >= section.offsetTop - 100) {
+      currentSection = sectionToNav[sectionOrder[i]];
+      break;
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.style.color = 'var(--color-accent)';
     }
   });
-}, {
-  threshold: 0.3,
-  rootMargin: '-60px 0px -40% 0px'
-});
+}
 
-sections.forEach(s => sectionObserver.observe(s));
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 // ========================================
 // Contact Form (basic handler)
