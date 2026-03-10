@@ -746,7 +746,7 @@ ul {
 
 .app-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   padding: 20px;
   background: var(--color-card-bg);
@@ -764,16 +764,18 @@ ul {
 .app-card__icon {
   width: 64px;
   height: 64px;
-  border-radius: var(--radius-sm);
+  border-radius: 16px;
   overflow: hidden;
   flex-shrink: 0;
   background: var(--color-tag-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .app-card__icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 .app-card__icon--placeholder {
