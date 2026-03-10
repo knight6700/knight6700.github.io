@@ -267,7 +267,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 120px 24px 80px;
+  padding: 120px 24px 40px;
   overflow: hidden;
 }
 
@@ -386,7 +386,7 @@ ul {
 
 .hero__scroll-indicator {
   position: absolute;
-  bottom: 32px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -482,7 +482,7 @@ ul {
    Sections
    ======================================== */
 .section {
-  padding: 100px 0;
+  padding: 20px 0;
   transition: background-color var(--transition);
 }
 
@@ -495,17 +495,16 @@ ul {
   font-weight: 700;
   letter-spacing: -1px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 /* ========================================
    About Section
    ======================================== */
 .about {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .about__text p {
@@ -523,13 +522,14 @@ ul {
 
 .about__stats {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .about__stat {
+  flex: 1;
   text-align: center;
-  padding: 24px;
+  padding: 16px 20px;
   background: var(--color-card-bg);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
@@ -542,14 +542,14 @@ ul {
 }
 
 .about__stat-number {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--color-accent);
   display: inline;
 }
 
 .about__stat-plus {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--color-accent);
 }
@@ -558,28 +558,21 @@ ul {
   display: block;
   font-size: 14px;
   color: var(--color-text-secondary);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
-@media (max-width: 768px) {
-  .about {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about__stats {
-    flex-direction: row;
-    gap: 16px;
+@media (max-width: 480px) {
+  .about__stat-number,
+  .about__stat-plus {
+    font-size: 24px;
   }
 
   .about__stat {
-    flex: 1;
-    padding: 16px;
+    padding: 12px 8px;
   }
 
-  .about__stat-number,
-  .about__stat-plus {
-    font-size: 28px;
+  .about__stat-label {
+    font-size: 12px;
   }
 }
 
@@ -1192,12 +1185,12 @@ ul {
   }
 
   .section {
-    padding: 72px 0;
+    padding: 16px 0;
   }
 
   .section__title {
     font-size: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 }
 
