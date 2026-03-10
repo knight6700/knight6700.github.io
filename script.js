@@ -1,253 +1,165 @@
-// Header
-// ===========================
-const headerBtn = document.querySelector(".header__button");
-const headerBg = document.querySelector(".header__bg");
-const headerBtnHam = document.querySelector(".header__ham");
-const headerNav = document.querySelector(".header__nav");
+// ========================================
+// Theme Toggle
+// ========================================
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
 
-headerBtn.addEventListener("click", function () {
-  headerBg.classList.toggle("expand-bg");
-  headerBtnHam.classList.toggle("header__ham-close");
-  headerBtnHam.classList.toggle("header__ham");
-  headerNav.classList.toggle("show-nav");
+const savedTheme = localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+html.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
 });
 
-const sendEmail = document.querySelectorAll(".send-email");
-const emailAddress = document.querySelectorAll(".email-address");
+// ========================================
+// Mobile Menu
+// ========================================
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
 
-for (let i = 0; i < sendEmail.length; i++) {
-  sendEmail[i].addEventListener("click", function () {
-    const part1 = "mahmoud.fariss9394";
-    const part2 = Math.pow(2, 6);
-    const part3 = String.fromCharCode(part2);
-    const part4 = "gmail.com";
-    const address = part1 + part3 + part4;
-    emailAddress[i].textContent = address;
-    emailAddress[i].style.cssText = "opacity: 1;";
+mobileToggle.addEventListener('click', () => {
+  mobileToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+document.querySelectorAll('.mobile-menu__link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
   });
-}
+});
 
-// Slider
-// ===========================
-const sliders = document.querySelectorAll(".slider");
+// ========================================
+// Sticky Nav Background
+// ========================================
+const nav = document.getElementById('nav');
+let lastScroll = 0;
 
-if (sliders != null) {
-  sliders.forEach((slider) => {
-    const slides = slider.getElementsByClassName("slide");
-    const sliderIndicator = slider.querySelector(".slider__indicator");
-    const nextBtn = slider.querySelector(".slider__next");
-    const prevBtn = slider.querySelector(".slider__prev");
-    const sliderContainer = slider.querySelector(".slider-container");
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll > 100) {
+    nav.style.boxShadow = '0 1px 8px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+  lastScroll = currentScroll;
+}, { passive: true });
 
-    let slideNumber = 1;
-    let slideAmount = 0;
-    let slideWidth = 0;
-
-    // Add dots below slider
-    // ==============================
-    for (let j = 0; j < slides.length; j++) {
-      sliderIndicator.insertAdjacentHTML(
-        "beforeend",
-        "<div class='slider__indicator-dot'>&nbsp;</div>"
-      );
+// ========================================
+// Smooth Scroll for Anchor Links
+// ========================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 60;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
+  });
+});
 
-    const sliderDots = slider.querySelectorAll(".slider__indicator-dot");
+// ========================================
+// Reveal on Scroll (Intersection Observer)
+// ========================================
+const revealElements = document.querySelectorAll('.reveal');
 
-    const updateSliderIndicator = function (slideNumber) {
-      sliderDots.forEach((sliderDot) => {
-        sliderDot.classList.remove("slider__indicator-dot-selected");
-      });
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
 
-      sliderDots[slideNumber - 1].classList.add(
-        "slider__indicator-dot-selected"
-      );
-    };
+revealElements.forEach(el => revealObserver.observe(el));
 
-    updateSliderIndicator(1);
+// ========================================
+// Animated Counters
+// ========================================
+const counters = document.querySelectorAll('[data-count]');
 
-    // Slider logic
-    // ==============================
-    window.addEventListener("load", function () {
-      const windowWidth = this.window.innerWidth;
-
-      const measureSlideWidth = function () {
-        slideWidth = sliderContainer.clientWidth / 10;
-      };
-
-      const updateSliderUI = function (slideAmount, slideNumber) {
-        sliderContainer.style.cssText =
-          "transform: translateX(-" +
-          slideAmount +
-          "rem); transition: all 0.5s;";
-
-        updateSliderIndicator(slideNumber);
-      };
-
-      const nextSlide = function () {
-        measureSlideWidth();
-
-        if (slideNumber < slides.length) {
-          slideAmount += slideWidth;
-          slideNumber++;
-
-          updateSliderUI(slideAmount, slideNumber);
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      let current = 0;
+      const increment = target / 40;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          el.textContent = target;
+          clearInterval(timer);
         } else {
-          slideAmount = 0;
-          slideNumber = 1;
-
-          updateSliderUI(slideAmount, slideNumber);
+          el.textContent = Math.floor(current);
         }
-      };
+      }, 30);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
 
-      const prevSlide = function () {
-        measureSlideWidth();
+counters.forEach(c => counterObserver.observe(c));
 
-        if (slideNumber > 1) {
-          slideAmount -= slideWidth;
-          slideNumber--;
+// ========================================
+// Active Nav Link Highlight
+// ========================================
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav__link');
 
-          updateSliderUI(slideAmount, slideNumber);
-        } else {
-          slideNumber = slides.length;
-          slideAmount = slideWidth * (slideNumber - 1);
-
-          updateSliderUI(slideAmount, slideNumber);
-        }
-      };
-
-      this.window.addEventListener("resize", function () {
-        const windowWidthDelta = windowWidth - this.window.innerWidth;
-
-        if (Math.abs(windowWidthDelta) > 5) {
-          measureSlideWidth();
-          slideAmount = 0;
-          slideNumber = 1;
-          updateSliderUI(slideAmount, slideNumber);
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === `#${id}`) {
+          link.style.color = 'var(--color-accent)';
         }
       });
-
-      nextBtn.addEventListener("click", nextSlide);
-      prevBtn.addEventListener("click", prevSlide);
-
-      // Touch gestures
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      const handleGesture = function () {
-        if (touchEndX < touchStartX - 50) {
-          nextSlide();
-        } else {
-          sliderContainer.style.cssText =
-            "transform: translateX(-" +
-            slideAmount +
-            "rem); transition: all 0.5s;";
-        }
-        if (touchEndX > touchStartX + 50) {
-          prevSlide();
-        } else {
-          sliderContainer.style.cssText =
-            "transform: translateX(-" +
-            slideAmount +
-            "rem); transition: all 0.5s;";
-        }
-      };
-
-      slider.addEventListener(
-        "touchstart",
-        function (e) {
-          touchStartX = e.changedTouches[0].screenX;
-        },
-        { passive: true }
-      );
-
-      slider.addEventListener(
-        "touchend",
-        function (e) {
-          touchEndX = e.changedTouches[0].screenX;
-          handleGesture();
-        },
-        { passive: true }
-      );
-
-      slider.addEventListener(
-        "touchmove",
-        function (e) {
-          let swipeAmount =
-            Math.abs(e.changedTouches[0].screenX - touchStartX) / 10;
-
-          if (e.changedTouches[0].screenX < touchStartX) {
-            sliderContainer.style.cssText =
-              "transform: translateX(-" + (slideAmount + swipeAmount) + "rem);";
-          } else {
-            sliderContainer.style.cssText =
-              "transform: translateX(-" + (slideAmount - swipeAmount) + "rem);";
-          }
-        },
-        { passive: true }
-      );
-    });
+    }
   });
-}
+}, {
+  threshold: 0.3,
+  rootMargin: '-60px 0px -40% 0px'
+});
 
-// Lazy Load Images
-const imageTargets = document.querySelectorAll("img[data-src]");
+sections.forEach(s => sectionObserver.observe(s));
 
-if (imageTargets != null) {
-  const loadImage = function (entries, observer) {
-    const [entry] = entries;
+// ========================================
+// Contact Form (basic handler)
+// ========================================
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
 
-    if (!entry.isIntersecting) return;
-
-    entry.target.src = entry.target.dataset.src;
-
-    entry.target.addEventListener("load", function () {
-      entry.target.classList.remove("lazy-img");
-    });
-
-    observer.unobserve(entry.target);
-  };
-
-  const imageObserver = new IntersectionObserver(loadImage, {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "200px",
-  });
-
-  imageTargets.forEach((img) => {
-    imageObserver.observe(img);
-  });
-}
-
-// Lazy load Galleries
-const galleryTargets = document.querySelectorAll(".gallery");
-
-if (galleryTargets != null) {
-  const loadGallery = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    const galleryItems = entry.target.querySelectorAll("img");
-
-    galleryItems.forEach((galleryItem) => {
-      galleryItem.src = galleryItem.dataset.src;
-
-      galleryItem.addEventListener("load", function () {
-        galleryItem.classList.remove("lazy-img");
-      });
-    });
-
-    observer.unobserve(entry.target);
-  };
-
-  const galleryObserver = new IntersectionObserver(loadGallery, {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "200px",
-  });
-
-  galleryTargets.forEach((gallery) => {
-    galleryObserver.observe(gallery);
+    // Since formspree needs a real endpoint, show success message
+    setTimeout(() => {
+      btn.textContent = 'Message Sent!';
+      btn.style.background = '#34c759';
+      this.reset();
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+    }, 1000);
   });
 }

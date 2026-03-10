@@ -1,587 +1,596 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#FFFFFF" />
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mahmoud Fares Naguib - Senior iOS Engineer crafting high-performance iOS apps with pixel-perfect UI, smooth animations, and scalable architecture.">
+  <meta property="og:title" content="Mahmoud Fares Naguib - Senior iOS Engineer">
+  <meta property="og:description" content="iOS engineer with 8+ years of experience building scalable and polished mobile applications using Swift, SwiftUI, and UIKit.">
+  <meta property="og:url" content="https://knight6700.github.io/">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" href="img/apple-icon.png">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.0">
+  <title>Mahmoud Fares Naguib - Senior iOS Engineer</title>
+</head>
+<body>
 
-    <meta
-      name="description"
-      content="My name is Viktor, I come from Croatia and I'm actively learning
-    swift to become an iOS developer."
-    />
-
-    <meta
-      property="og:title"
-      content="Portfolio - Viktor Mauzer, iOS Developer"
-    />
-    <meta
-      property="og:description"
-      content="My name is Viktor, I come from Croatia and I'm actively learning
-      swift to become an iOS developer."
-    />
-    <meta
-      property="og:image"
-      content="https://viktormauzer.github.io/img/viktormauzer-dev-portfolio.png"
-    />
-    <meta property="og:url" content="https://viktormauzer.github.io/" />
-    <meta
-      property="og:site_name"
-      content="Portfolio - Viktor Mauzer, iOS Developer"
-    />
-
-    <link rel="apple-touch-icon" href="img/apple-icon.png" />
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
-
-    <link rel="stylesheet" href="style.css?v=2.0" />
-    <title>Portfolio - Viktor Mauzer, iOS Developer</title>
-  </head>
-  <body ontouchstart="">
-    <header class="header">
-      <div class="header__button no__highlights">
-        <div class="header__ham">
-          <span>&nbsp;</span>
-          <span>&nbsp;</span>
-          <span>&nbsp;</span>
-        </div>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">MF</a>
+      <div class="nav__links">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#apps" class="nav__link">Apps</a>
+        <a href="#opensource" class="nav__link">Open Source</a>
+        <a href="#contact" class="nav__link">Contact</a>
       </div>
-      <div class="header__bg">&nbsp;</div>
-      <nav class="header__nav">
-        <div class="header__nav-item">
-          <span>Portfolio</span>
-          <ul>
-            <li>
-              <a class="header__nav-link" href="/portfolio/stayfitshop.html"
-                >Careem</a
-              >
-            </li>
-            <li>
-              <a class="header__nav-link" href="/portfolio/stranger-chats.html"
-                >Stranger Chats</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/CombinedLogin"
-                >CombinedLogin →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/CustomTabBar"
-                >CustomTabBar →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/YTFilter"
-                >YTFilter →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/SideMenu"
-                >SideMenu →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/TheSlider"
-                >TheSlider →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/openweather-UIKit"
-                >OpenWeather →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/FriendFaceChallenge"
-                >FriendFace Challenge →</a
-              >
-            </li>
-            <li>
-              <a aria-label="Github"
-              rel="noreferrer noopener"
-              target="_blank" 
-              class="header__nav-link" 
-              href="https://github.com/viktormauzer/BMICalculator-iOS-UIKit"
-                >BMICalculator →</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="header__nav-item">
-          <span>menu</span>
-          <ul>
-            <li>
-              <a class="header__nav-link" href="/index.html">Home</a>
-            </li>
-            <li><a class="header__nav-link" href="about.html">About</a></li>
-            <li><a class="header__nav-link" href="privacy.html">Privacy</a></li>
-          </ul>
-        </div>
-        <div class="header__nav-item">
-          <span>Contact</span>
-          <ul>
-            <li>
-              <a
-                class="button button-white no__highlights"
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://www.linkedin.com/in/mahmoud-fariss-712667154/"
-              >
-                <svg class="button-icon">
-                  <use xlink:href="/icons/sprite.svg#vector-linkedin"></use>
-                </svg>
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                class="button button-white no__highlights"
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://knight6700.github.io/files/MahmoudFaresiOSCV.pdf"
-              >
-                Download CV
-              </a>
-            </li>
-            <li>
-              <div class="button send-email button-white no__highlights">
-                <svg class="button-icon">
-                  <use xlink:href="/icons/sprite.svg#vector-mail"></use>
-                </svg>
-                Email Address
-              </div>
-              <div class="email-address"></div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+      <button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="nav__theme-icon nav__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="nav__theme-icon nav__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-    <section class="hero">
-      <img
-        src="img/decoration/grid-dots.png"
-        alt="grid-dots"
-        class="grid__dots"
-      />
-      <div class="decoration__element">&nbsp;</div>
-      <div class="decoration__element2">&nbsp;</div>
-      <div class="hero__info">
-        <img class="hero__info-img" src="img/profile-pic.png" alt="profile__photo">
-        <div class="hero__text">
-          <h1>Mahmoud Fares</h1>
-          <span class="hero__text-desc">iOS Developer at Careem ®</span>
-        </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#skills" class="mobile-menu__link">Skills</a>
+    <a href="#experience" class="mobile-menu__link">Experience</a>
+    <a href="#apps" class="mobile-menu__link">Apps</a>
+    <a href="#opensource" class="mobile-menu__link">Open Source</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-gradient"></div>
+    <div class="hero__content reveal">
+      <div class="hero__avatar">
+        <img src="img/profile-pic.png" alt="Mahmoud Fares Naguib" class="hero__avatar-img">
       </div>
+      <h1 class="hero__name">Mahmoud Fares Naguib</h1>
+      <p class="hero__title">Senior iOS Engineer</p>
+      <p class="hero__tagline">iOS engineer with 8+ years of experience building scalable and polished mobile applications using Swift, SwiftUI, and UIKit. Specialized in performance optimization, advanced animations, and clean architecture.</p>
       <div class="hero__cta">
-        <span>portfolio</span>
-        <div class="hero__cta-icon">
-          <svg class="hero__icon">
-            <use xlink:href="/icons/sprite.svg#vector-arrow"></use>
-          </svg>
-        </div>
+        <a href="#apps" class="btn btn--primary">View Projects</a>
+        <a href="files/MahmoudFaresiOSCV.pdf" class="btn btn--secondary" target="_blank" rel="noopener">Download Resume</a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
       </div>
-    </section>
+      <div class="hero__socials">
+        <a href="https://www.linkedin.com/in/mahmoud-fariss-712667154/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/knight6700" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:mahmoud.fariss9394@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
 
-    <section class="stayfitshop">
-      <div class="stayfitshop__slider slider">
-        <div class="slider__next slider__btn no__highlights">
-          <svg class="slider__next-icon slider__icon">
-            <use xlink:href="/icons/sprite.svg#vector-arrow"></use>
-          </svg>
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title reveal">About Me</h2>
+      <div class="about reveal">
+        <div class="about__text">
+          <p>Mahmoud is a Senior iOS Engineer with more than 8 years of experience developing high-quality mobile applications.</p>
+          <p>He specializes in Swift, SwiftUI, and UIKit with deep expertise in polished UI development, smooth animations, and scalable architecture patterns.</p>
+          <p>Mahmoud thrives in asynchronous startup environments and has independently delivered production applications end-to-end &mdash; from architecture and implementation to deployment.</p>
+          <p>He has worked on banking, ride-hailing, fintech, and enterprise applications across international companies.</p>
         </div>
-        <div class="slider__prev slider__btn no__highlights">
-          <svg class="slider__prev-icon slider__icon">
-            <use xlink:href="/icons/sprite.svg#vector-arrow"></use>
-          </svg>
-        </div>
-        <div class="stayfitshop__slider-container slider-container">
-          <img
-            class="slide lazy-img"
-            data-src="img/Careem/1.png"
-            src="img/open-weather/lazy.png"
-            alt="slide"
-          />
-          <img
-            class="slide lazy-img"
-            data-src="img/Careem/2.png"
-            src="img/open-weather/lazy.png"
-            alt="slide"
-          />
-          <img
-            class="slide lazy-img"
-            data-src="img/Careem/3.png"
-            src="img/open-weather/lazy.png"
-            alt="slide"
-          />
-          <img
-            class="slide lazy-img"
-            data-src="img/Careem/4.png"
-            src="img/open-weather/lazy.png"
-            alt="slide"
-          />
-        </div>
-        <div class="slider__indicator"></div>
-      </div>
-      </div>
-      <div class="stayfitshop__info">
-        <h2>Careem</h2>
-        <p>
-          Made using SwiftUI with KMP, Careem, the everything app for your everyday needs. Rides, food, groceries, payments and more.
-        </p>
-        <div class="stayfitshop__cta">
-          <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1258055131&amp;mt=8">
-                <img src="./icons/svg/appStore-logo.svg" alt="Download in App Store" style="width: 30rem; height: 30rem;">
-              </a>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-number" data-count="8">0</span><span class="about__stat-plus">+</span>
+            <span class="about__stat-label">Years Experience</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number" data-count="7">0</span><span class="about__stat-plus">+</span>
+            <span class="about__stat-label">Apps Shipped</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number" data-count="7">0</span>
+            <span class="about__stat-label">Companies</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="stranger__chats">
-      <div class="stranger__chats-info">
-        <h2>Stranger Chats</h2>
-        <p>
-          A Firebase programmatic UIKit chat app for people who have strange
-          friends. Users can register their account, login, add friends via
-          their email address, add their friends' profile image and chat. All
-          data is synced to the Firebase Firestore database.
-        </p>
-        <div class="stranger__chats-cta">
-          <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/Stranger-Chats"
-            class="github__button button button-white no__highlights"
-          >
-            <svg class="github__button-icon button-icon">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          <a
-            href="/portfolio/stranger-chats.html"
-            class="button button-white no__highlights"
-            >more info</a
-          >
+  <!-- Skills Section -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <h2 class="section__title reveal">Skills & Expertise</h2>
+      <div class="skills reveal">
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Languages & Frameworks</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">UIKit</span>
+            <span class="skill-tag">RxSwift</span>
+            <span class="skill-tag">Combine</span>
+            <span class="skill-tag">Kotlin Multiplatform</span>
+            <span class="skill-tag">Objective-C</span>
+            <span class="skill-tag">Kotlin</span>
+          </div>
         </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Architecture</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">MVVM</span>
+            <span class="skill-tag">TCA</span>
+            <span class="skill-tag">Coordinator</span>
+            <span class="skill-tag">VIPER</span>
+            <span class="skill-tag">Redux</span>
+            <span class="skill-tag">Clean Architecture</span>
+            <span class="skill-tag">SOLID</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Tools</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">Xcode</span>
+            <span class="skill-tag">Fastlane</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Swift Package Manager</span>
+            <span class="skill-tag">CocoaPods</span>
+            <span class="skill-tag">Bitrise</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Analytics</span>
+            <span class="skill-tag">XCTest</span>
+            <span class="skill-tag">XCUITest</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Advanced iOS</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">Async/Await</span>
+            <span class="skill-tag">Modular Architecture</span>
+            <span class="skill-tag">Snapshot Testing</span>
+            <span class="skill-tag">CI/CD Pipelines</span>
+            <span class="skill-tag">Crash Monitoring</span>
+            <span class="skill-tag">Code Review</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Advanced UI/UX</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">Custom Animations</span>
+            <span class="skill-tag">matchedGeometryEffect</span>
+            <span class="skill-tag">GestureState</span>
+            <span class="skill-tag">UIViewPropertyAnimator</span>
+            <span class="skill-tag">Smooth UI Transitions</span>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="showcase">
-      <h2 class="showcase__title">More Apps & Projects</h2>
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section__title reveal">Work Experience</h2>
+      <div class="timeline">
 
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/combinedlogin-thumb.jpeg" src="img/showcase/combinedlogin-video.mp4"></video>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Senior Software Engineer</h3>
+              <span class="timeline__company">Careem</span>
+              <span class="timeline__date">2024 &ndash; Present</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Built complex iOS features using SwiftUI and Combine</li>
+              <li>Implemented cross-platform logic with Kotlin Multiplatform</li>
+              <li>Delivered smooth animations and 60fps UI interactions</li>
+              <li>Optimized CI/CD and build pipelines</li>
+            </ul>
+          </div>
         </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>CombinedLogin</h3>
-            <p>A simple register/login screen to showcase the implementation of Combine Framework in UIKit with MVVM architecture. All fields are required and the password fields must match before the submit button is enabled.</p>
-            <p>To add the extra touch to the design, I used custom fonts and background for this form.</p>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Software Engineer</h3>
+              <span class="timeline__company">Amwal</span>
+              <span class="timeline__date">2023 &ndash; 2024</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Built Payment SDK using SwiftUI and Swift Package Manager</li>
+              <li>Implemented Apple Pay integration</li>
+              <li>SDK adopted by multiple production apps</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Software Engineer</h3>
+              <span class="timeline__company">Spomotion</span>
+              <span class="timeline__date">2022 &ndash; 2023</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Built iOS app using SwiftUI and TCA</li>
+              <li>Created reusable Swift packages</li>
+              <li>Delivered full product independently</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Software Engineer</h3>
+              <span class="timeline__company">Link Development</span>
+              <span class="timeline__date">2021 &ndash; 2022</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Developed apps for Red Bull and IHF</li>
+              <li>Implemented backend-driven UI systems</li>
+              <li>Built custom animations and transitions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Software Engineer</h3>
+              <span class="timeline__company">Banque Misr</span>
+              <span class="timeline__date">2020 &ndash; 2021</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Built banking app from scratch</li>
+              <li>Implemented secure authentication flows</li>
+              <li>Designed shared UI frameworks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>iOS Developer</h3>
+              <span class="timeline__company">Sat Finder</span>
+              <span class="timeline__date">2018 &ndash; 2020</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Built offline-first applications</li>
+              <li>Implemented CoreData storage</li>
+              <li>Designed UX flows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>iOS Developer</h3>
+              <span class="timeline__company">Cyan Digital House</span>
+              <span class="timeline__date">2017 &ndash; 2018</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Migrated Objective-C apps to Swift</li>
+              <li>Built reusable UIKit components</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Apps Section -->
+  <section class="section section--alt" id="apps">
+    <div class="container">
+      <h2 class="section__title reveal">Featured Apps</h2>
+      <div class="apps-grid reveal">
+
+        <a href="https://apps.apple.com/app/careem/id592978487" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon">
+            <img src="img/Careem/1.png" alt="Careem" loading="lazy">
+          </div>
+          <div class="app-card__info">
+            <h3>Careem</h3>
+            <p>Ride-hailing super app for rides, food and payments</p>
+            <div class="app-card__tech">
+              <span>SwiftUI</span>
+              <span>Combine</span>
+              <span>KMP</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/bm-online/id1462899730" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>BM</span>
+          </div>
+          <div class="app-card__info">
+            <h3>BM Online</h3>
+            <p>Mobile banking app for Banque Misr</p>
+            <div class="app-card__tech">
+              <span>Swift</span>
+              <span>UIKit</span>
+              <span>RxSwift</span>
+              <span>MVVM</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/daleelstore/id1390260573" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>DS</span>
+          </div>
+          <div class="app-card__info">
+            <h3>DaleelStore</h3>
+            <p>Marketplace for digital gift cards and services</p>
+            <div class="app-card__tech">
+              <span>Swift</span>
+              <span>UIKit</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/here-passport/id6517348112" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>HP</span>
+          </div>
+          <div class="app-card__info">
+            <h3>Here Passport</h3>
+            <p>Travel utility and digital passport services</p>
+            <div class="app-card__tech">
+              <span>SwiftUI</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/id1490140841" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>NM</span>
+          </div>
+          <div class="app-card__info">
+            <h3>&#x0646;&#x0633;&#x062E;&#x0629; &#x0627;&#x0644;&#x0645;&#x0633;&#x062A;&#x0634;&#x0627;&#x0631;&#x064A;&#x0646;</h3>
+            <p>Consulting platform connecting professionals and clients</p>
+            <div class="app-card__tech">
+              <span>Swift</span>
+              <span>UIKit</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/id1442601337" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>NW</span>
+          </div>
+          <div class="app-card__info">
+            <h3>&#x0646;&#x0648;&#x0627;&#x0641;&#x0630; &#x0645;&#x0646;&#x0634;&#x0622;&#x062A;</h3>
+            <p>Business services platform</p>
+            <div class="app-card__tech">
+              <span>Swift</span>
+              <span>UIKit</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+        <a href="https://apkpure.com/ojo-fleet/com.sat_finder.ojofleet" target="_blank" rel="noopener noreferrer" class="app-card">
+          <div class="app-card__icon app-card__icon--placeholder">
+            <span>OF</span>
+          </div>
+          <div class="app-card__info">
+            <h3>Ojo Fleet</h3>
+            <p>Fleet tracking and vehicle management system</p>
+            <div class="app-card__tech">
+              <span>Swift</span>
+              <span>CoreLocation</span>
+            </div>
+          </div>
+          <div class="app-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Section -->
+  <section class="section" id="opensource">
+    <div class="container">
+      <h2 class="section__title reveal">Open Source & GitHub</h2>
+      <div class="projects-grid reveal">
+
+        <a href="https://github.com/knight6700/MarvelApp" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-card__header">
+            <svg class="project-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+            <svg class="project-card__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <h3>MarvelApp</h3>
+          <p>iOS sample app demonstrating networking and MVVM architecture using Marvel API.</p>
+          <div class="project-card__tech">
+            <span>Swift</span>
             <span>UIKit</span>
-            <span>Combine</span>
             <span>MVVM</span>
-            <span>Custom Fonts</span>
           </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/CombinedLogin"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
+        </a>
 
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/custom-tabbar-thumb.jpeg" src="img/showcase/custom-tabbar-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>Custom TabBar</h3>
-            <p>This custom TabBar is made with SwiftUI buttons. Works on all device sizes and orientations. There is a state property "selectedTab" that tracks which tab button is pressed and switches over the enum to show the corresponding view as well as style the buttons.</p>
-            <p>Spring animations added to tabbar buttons for extra flare.</p>
+        <a href="https://github.com/knight6700/CharactersApp" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-card__header">
+            <svg class="project-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+            <svg class="project-card__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <h3>CharactersApp</h3>
+          <p>Scalable iOS architecture example using modern design patterns.</p>
+          <div class="project-card__tech">
+            <span>Swift</span>
             <span>SwiftUI</span>
-            <span>custom tabbar</span>
+            <span>Clean Architecture</span>
           </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/CustomTabBar"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
+        </a>
+
+        <a href="https://github.com/knight6700/TCATooling" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-card__header">
+            <svg class="project-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+            <svg class="project-card__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <h3>TCATooling</h3>
+          <p>Developer tooling for The Composable Architecture ecosystem.</p>
+          <div class="project-card__tech">
+            <span>Swift</span>
+            <span>TCA</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section section--alt" id="education">
+    <div class="container">
+      <h2 class="section__title reveal">Education</h2>
+      <div class="education reveal">
+        <div class="education__card">
+          <div class="education__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M3 9v6"/></svg>
+          </div>
+          <div class="education__info">
+            <h3>Bachelor of Computer Science</h3>
+            <p>Ahram Canadian University</p>
+            <span>2011 &ndash; 2015</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/ytfilter-thumb.jpeg" src="img/showcase/ytfilter-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>YTFilter</h3>
-            <p>Built using SwiftUI where the app filters content in a list based on a button press similar to the YouTube app on iOS (only the content is in image form, not video).</p>
-            <p> All categories are added to the selector automatically based on the included data. By tapping on each category, the list shows coresponding data.</p>
-            <span>SwiftUI</span>
-            <span>customized list view</span>
-            <span>MapKit</span>
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__title reveal">Get In Touch</h2>
+      <div class="contact reveal">
+        <div class="contact__info">
+          <p class="contact__intro">Have a project in mind or want to discuss an opportunity? I'd love to hear from you.</p>
+          <div class="contact__links">
+            <a href="mailto:mahmoud.fariss9394@gmail.com" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div>
+                <span>Email</span>
+                <strong>mahmoud.fariss9394@gmail.com</strong>
+              </div>
+            </a>
+            <a href="tel:+201023202624" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div>
+                <span>Phone</span>
+                <strong>+20 102 320 2624</strong>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/mahmoud-fariss-712667154/" target="_blank" rel="noopener noreferrer" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <div>
+                <span>LinkedIn</span>
+                <strong>Mahmoud Fares</strong>
+              </div>
+            </a>
+            <a href="https://github.com/knight6700" target="_blank" rel="noopener noreferrer" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <div>
+                <span>GitHub</span>
+                <strong>knight6700</strong>
+              </div>
+            </a>
           </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/YTFilter"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
         </div>
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+          <div class="contact__form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="contact__form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="contact__form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Your message..." rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        </form>
       </div>
+    </div>
+  </section>
 
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/side-menu-thumb.jpeg" src="img/showcase/side-menu-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>SideMenu</h3>
-            <p>UIKit based side menu activated by button press for a Swift iOS app. To showcase the feature, I made an "email-like" app where users can open the menu by pressing the navigation bar button.</p>
-            <p>The menu slides from the left and shows possible categories to filter shown messages. To close the menu, users can tap on a category, tap at the empty spaces to the right or drag the menu to the left.</p>
-            <span>UIKit</span>
-            <span>Storyboard</span>
-            <span>xib</span>
-          </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/SideMenu"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/theslider-thumb.jpeg" src="img/showcase/theslider-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>TheSlider</h3>
-            <p>This is a simple content slider built using SwiftUI with the help of TabView and its custom TabViewStyle. I decided not to use the default index display mode so I made my own.</p>
-            <p>The slider works by dragging the image on top and the rest of the content updates by updating the selectedIndex property which is bound in TabView. This also updates the custom index display which I called the SlideIndicatorView.</p>
-            <span>SwiftUI</span>
-            <span>custom index display mode</span>
-          </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/TheSlider"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/openweather-thumb.jpeg" src="img/showcase/openweather-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>OpenWeather</h3>
-            <p>A Simple weather app made using OpenWeatherMap API for current weather
-              conditions. Users can search weather conditions by city name or by
-              tapping the location button to use their current location for fetching
-              weather.</p>
-              <p>The background images change depending on the fetched weather data. There are a few options: cloudy, rain, snow, sunny and storm.</p>
-            <span>uikit</span>
-            <span>storyboard</span>
-            <span>api</span>
-          </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/openweather-UIKit"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/friendface-thumb.jpeg" src="img/showcase/friendface-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>FriendFace Challenge</h3>
-            <p>I made this app while attending Paul Hudson's 100 days of SwiftUI course as a challenge set by Paul. The app needs to download data from the internet, save it device using CoreData asynchronously and display it in the UI.</p>
-            <p>I enjoyed this challenge so much I made a tutorial on how it's done on Medium. Check it out here -> <a href="https://medium.com/@viktormauzer/solving-friendface-100daysofswiftui-challenge-day-60-61-754309014448">FriendFace Challenge Tutorial</a></p>
-            <span>SwiftUI</span>
-            <span>Challenge</span>
-            <span>tutorial</span>
-          </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/FriendFaceChallenge"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-video">
-          <video controls
-          preload="none"
-          poster="img/showcase/bmi-calculator-thumb.jpeg" src="img/showcase/bmi-calculator-video.mp4"></video>
-        </div>
-        <div class="showcase__item-info">
-          <div class="showcase__item-info-text">
-            <h3>BMICalculator</h3>
-            <p>Made during my iOS Development course by Dr. Angela Yu on Udemy using UIKit and storyboards. The user can input their weight and height information using sliders and calculate their BMI by pressing the calculate button.</p>
-            <p>The value is calculated and presented in a new view controller modally. Pressing the recalculate button dismisses the view controller.</p>
-            <span>uikit</span>
-            <span>storyboard</span>
-          </div>
-          <div class="showcase__item-info-cta">
-            <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/viktormauzer/BMICalculator-iOS-UIKit"
-            class="github__button button button-dark no__highlights"
-          >
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon-light">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
       <div class="footer__content">
-        <a href="about.html">About/Contact</a>
-        <a href="privacy.html">Privacy</a>
+        <p>&copy; 2024 Mahmoud Fares Naguib. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/mahmoud-fariss-712667154/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/knight6700" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:mahmoud.fariss9394@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js?v=3.0"></script>
+</body>
 </html>
