@@ -700,13 +700,22 @@ ul {
 }
 
 .timeline__company {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 15px;
   font-weight: 500;
   color: var(--color-accent);
   margin-bottom: 4px;
   text-decoration: none;
   transition: opacity var(--transition);
+}
+.timeline__logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 a.timeline__company::after {
   content: '↗';
