@@ -128,7 +128,7 @@ function updateActiveNav() {
     'experience': 'experience',
     'apps': 'apps',
     'opensource': 'opensource',
-    'education': 'contact',
+    'education': 'opensource',
     'contact': 'contact'
   };
   const sectionOrder = ['about', 'skills', 'experience', 'apps', 'opensource', 'education', 'contact'];

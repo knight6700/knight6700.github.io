@@ -1015,6 +1015,55 @@ ul {
   align-items: start;
 }
 
+.contact--calendly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.contact--calendly .contact__intro {
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.btn--calendly {
+  padding: 16px 36px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.contact__socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact__socials a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition);
+}
+
+.contact__socials a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: var(--color-tag-bg);
+  transform: translateY(-2px);
+}
+
+.contact__socials svg {
+  width: 20px;
+  height: 20px;
+}
+
 .contact__intro {
   font-size: 19px;
   line-height: 1.7;
