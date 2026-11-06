@@ -144,7 +144,7 @@ section[id] { scroll-margin-top: 72px; }
 .nav__link:hover, .nav__link.is-active { color: var(--ink); }
 .nav__actions { display: flex; gap: 4px; }
 
-.nav__menu-btn { display: none; flex-direction: column; gap: 6px; }
+.nav__menu-btn { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
 .nav__menu-btn span {
   display: block;
   width: 18px;
@@ -251,12 +251,16 @@ section[id] { scroll-margin-top: 72px; }
 
 .springboard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* minmax(0, …): long labels must not widen a column; all 4 stay equal. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px 10px;
   margin-top: 30px;
 }
 
+.springboard li, .dock li { min-width: 0; }
+
 .springboard a, .dock a {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,10 +275,15 @@ section[id] { scroll-margin-top: 72px; }
   background: #fff;
   transition: transform .25s var(--ease);
 }
-.springboard a:hover img, .dock a:hover img { transform: scale(1.08); }
+/* Hover only on real pointers: on touch, :hover sticks after a tap. */
+@media (hover: hover) {
+  .springboard a:hover img, .dock a:hover img { transform: scale(1.08); }
+}
 .springboard a:active img, .dock a:active img { transform: scale(.94); }
 .springboard span {
-  max-width: 100%;
+  display: block;
+  width: calc(100% + 8px); /* labels may use the column gap, like iOS */
+  margin-inline: -4px;
   font-size: .68rem;
   line-height: 1.2;
   text-align: center;
@@ -286,7 +295,7 @@ section[id] { scroll-margin-top: 72px; }
 
 .dock {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-top: auto;
   padding: 10px;
@@ -530,6 +539,8 @@ section[id] { scroll-margin-top: 72px; }
 @media (max-width: 480px) {
   .skills { grid-template-columns: 1fr; }
   .hero__cta .btn, .contact__cta .btn { flex: 1 1 100%; }
+  .device { width: min(264px, 74vw); }
+  .springboard { gap: 14px 8px; margin-top: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
